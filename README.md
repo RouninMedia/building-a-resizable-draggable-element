@@ -20,7 +20,7 @@ The key to combining `draggability` *with* `resizability` is this line:
 // RETURN IF MOUSE DOWN EVENT IS OVER THE RESIZE HANDLE
 if (((resizableElement.offsetWidth - mousedownX) < 16) && ((resizableElement.offsetHeight - mousedownY) < 16)) return;
 ```
-which separateates the `resize handle` from the grabbable surface of the resizable element.
+which separates the `resize handle` from the grabbable surface of the resizable element.
 
 See the following markup, styling and scripting:
 
