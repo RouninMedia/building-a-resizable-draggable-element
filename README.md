@@ -12,6 +12,13 @@ We can achieve this using *CSS* on its own to handle resizability:
 
 and CSS (`.myElement {cursor: grab;}` / `.incomeChart[data-grabbed] {cursor: grabbing;}`) and JS (`dragResizableElement()`) to handle draggability.
 
+The key to combining _draggability_ with _resizability_ is this line:
+```js
+// RETURN IF MOUSE DOWN EVENT IS OVER THE RESIZE HANDLE
+if (((resizableElement.offsetWidth - mousedownX) < 16) && ((resizableElement.offsetHeight - mousedownY) < 16)) return;
+```
+which isolates the `resize handle` from the grabbable surface of the resizable element.
+
 See the following markup, styling and scripting:
 
 ## HTML
