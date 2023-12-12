@@ -12,8 +12,8 @@ We can achieve this using **CSS** on its own to handle resizability:
 
 and **CSS** and **JS** to handle draggability:
 
- - CSS: (`.myElement {cursor: grab;}` / `.incomeChart[data-grabbed] {cursor: grabbing;}`)
- - JS: (`dragResizableElement()`)
+ - **CSS:** (`.myElement {cursor: grab;}` / `.incomeChart[data-grabbed] {cursor: grabbing;}`)
+ - **JS:** (`dragResizableElement()`)
 
 The key to combining _draggability_ with _resizability_ is this line:
 ```js
