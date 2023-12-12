@@ -42,7 +42,6 @@ See the following markup, styling and scripting:
 const dragResizableElement = function (e) {
 
   const resizableElement = e.currentTarget;
-
   resizableElement.setAttribute('data-grabbed', 'grabbed');
   const initialTop = resizableElement.style.getPropertyValue('top').replace('px', '') || 12;
   const initialLeft = resizableElement.style.getPropertyValue('left').replace('px', '') || 12;         
