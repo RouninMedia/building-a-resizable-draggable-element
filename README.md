@@ -15,7 +15,7 @@ and **CSS** and **JS** to handle draggability:
  - **CSS:** (`.myElement {cursor: grab;}` / `.incomeChart[data-grabbed] {cursor: grabbing;}`)
  - **JS:** (`dragResizableElement()`)
 
-The key to combining _draggability_ with _resizability_ is this line:
+The key to combining `draggability` *with* `resizability` is this line:
 ```js
 // RETURN IF MOUSE DOWN EVENT IS OVER THE RESIZE HANDLE
 if (((resizableElement.offsetWidth - mousedownX) < 16) && ((resizableElement.offsetHeight - mousedownY) < 16)) return;
