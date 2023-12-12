@@ -3,14 +3,14 @@ How to build an element in HTML, CSS and JS which is both resizable and draggabl
 
 In specific situations, it's useful to have an HTML element which is *both* `draggable`, *and* which also has an easily operable `resize handle`.
 
-We can achieve this using **CSS** on its own to handle resizability:
+We can achieve this by handling resizability via **CSS** alone:
 
 ```css
   overflow: hidden;
   resize: both;
 ```
 
-and **CSS** and **JS** to handle draggability:
+and handling draggability via **CSS** and **JS**:
 
  - **CSS:** (`.myElement {cursor: grab;}` / `.incomeChart[data-grabbed] {cursor: grabbing;}`)
  - **JS:** (`dragResizableElement()`)
