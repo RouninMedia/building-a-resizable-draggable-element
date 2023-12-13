@@ -84,4 +84,4 @@ document.querySelector('.myElement').addEventListener('mousedown', dragResizable
 
 _______
 
-**Source:** <a href="https://jsfiddle.net/manojmcet/XXTQd/" target="_blank">https://jsfiddle.net/manojmcet/XXTQd/</a>
+**Original Inspiration:** https://jsfiddle.net/manojmcet/XXTQd/
