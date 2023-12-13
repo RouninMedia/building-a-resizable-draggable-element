@@ -78,12 +78,10 @@ const dragResizableElement = function (e) {
     document.removeEventListener('mousemove', trackMouse);
   });
 }
-```
-
-
-_______
-
-**Source:** _https://jsfiddle.net/manojmcet/XXTQd/_
 
 document.querySelector('.myElement').addEventListener('mousedown', dragResizableElement);
 ```
+
+_______
+
+**Source:** _<a href="" target="_blank">https://jsfiddle.net/manojmcet/XXTQd/</a>_
