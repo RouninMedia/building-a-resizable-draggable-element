@@ -89,4 +89,37 @@ document.querySelector('.myElement').addEventListener('mousedown', dragResizable
 
 _______
 
+If a `resize handle` is not a requirement, then the function may be slightly simpler:
+
+```js
+const dragElement = function (e) {
+
+  const draggableElement = e.currentTarget;
+  draggableElement.setAttribute('data-grabbed', 'grabbed');
+  const initialTop = draggableElement.style.getPropertyValue('top').replace('px', '') || 0;
+  const initialLeft = draggableElement.style.getPropertyValue('left').replace('px', '') || 0;         
+  const mousedownX = (e.clientX - initialLeft);
+  const mousedownY = (e.clientY - initialTop);
+
+  const container = document.getElementById("container");
+  const containerBoundaryX = (container.clientWidth - draggableElement.clientWidth);
+  const containerBoundaryY = (container.clientHeight - draggableElement.clientHeight);
+
+  const trackMouse = (e) => {
+    let mousemoveX = (e.clientX - mousedownX);
+    let mousemoveY = (e.clientY - mousedownY);
+    draggableElement.style.setProperty('top', (((mousemoveY > 0) ? ((mousemoveY < containerBoundaryY) ? mousemoveY : containerBoundaryY) : 0) + 'px'));
+    draggableElement.style.setProperty('left', (((mousemoveX > 0) ? ((mousemoveX < containerBoundaryX) ? mousemoveX : containerBoundaryX) : 0) + 'px'));
+  }; 
+
+  document.addEventListener('mousemove', trackMouse);
+  document.addEventListener('mouseup', () => {
+  draggableElement.removeAttribute('data-grabbed');
+    document.removeEventListener('mousemove', trackMouse);
+  });
+}
+
+document.querySelector('.draggableElement').addEventListener('mousedown', dragElement);
+```
+
 **Original Inspiration:** https://jsfiddle.net/manojmcet/XXTQd/
