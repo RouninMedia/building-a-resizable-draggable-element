@@ -89,7 +89,7 @@ document.querySelector('.myElement').addEventListener('mousedown', dragResizable
 
 _______
 
-If a `resize handle` is not a requirement, then the function may be slightly simpler:
+If a `resize handle` is not a requirement, the function may be slightly simpler:
 
 ```js
 const dragElement = function (e) {
@@ -122,4 +122,4 @@ const dragElement = function (e) {
 document.querySelector('.draggableElement').addEventListener('mousedown', dragElement);
 ```
 
-**Original Inspiration:** https://jsfiddle.net/manojmcet/XXTQd/
+**Original Inspiration for the function immediately above:** https://jsfiddle.net/manojmcet/XXTQd/
