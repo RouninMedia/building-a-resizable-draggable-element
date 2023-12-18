@@ -1,7 +1,10 @@
 # Building a resizable, draggable element
 How to build an element in HTML, CSS and JS which is both resizable and draggable.
 
-In specific situations, it's useful to have an HTML element which is *both* `draggable`, *and* which also has an easily operable `resize handle`.
+In specific situations, it's useful to have an HTML element which is *both*:
+
+1) `draggable`; *and* which also
+2) has an easily operable `resize handle`.
 
 We can achieve this by handling resizability via **CSS** alone:
 
